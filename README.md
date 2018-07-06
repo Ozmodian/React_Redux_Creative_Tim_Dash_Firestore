@@ -3,6 +3,20 @@
 
 ![alt text](https://s3.amazonaws.com/creativetim_bucket/products/71/original/opt_mdr_thumbnail.jpg "Material Dashboard Free React")
 
+
+Here are the changes I made to the free Creative Tim dashboard.  I am submitting this as an example to how to use Redux with the great Material Tim dashboard.  It took me SEVERAL hours of fiddling to get it right.
+
+You will notice that i turned the Profile page into a class.  The Material Tim dashboard comes as basically all functions.  So to make it more compatible. I made almost no changes to the actual component function.  I wrapped a class around it.  I hope you learn something from it, i certainly did.
+
+
+1) Added Redux
+2) Configured to work with Firestore (please update firebase.js with your API info). This is Firestore NOT Firebase Readtime Database.  
+3) Tested with Firestore offline. Works great (even without the enablePersistance() called).  To try, turn chome network to Offline and you can still navigate and change profile.  On re-connect, it will auto-sync.  All this with not a single line of code.  I am impressed.
+4) Fixed a bug with Material UI input.  If you pass an Undefined value and later set the value, the label animation does not fire and covers the text.  This is annoying.  To fix it, i pass '' instead of undefined.
+5) I only updated the Profile page and made it the default route. 
+
+
+
 Material Dashboard React is a free Material-UI Admin with a fresh, new design inspired by Google's Material Design. We are very excited to introduce our take on the material concepts through an easy to use and beautiful set of components. Material Dashboard React was built over the popular Material-UI framework.
 
 Material Dashboard React makes use of light, surface and movement. The general layout resembles sheets of paper following multiple different layers, so that the depth and order is obvious. The navigation stays mainly on the left sidebar and the content is on the right inside the main panel.

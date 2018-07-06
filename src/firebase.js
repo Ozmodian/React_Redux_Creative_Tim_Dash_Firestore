@@ -2,21 +2,19 @@ import * as firebase from 'firebase';
 
 class DataProvider {
   
-  instance = {};
-  listeners = {};
+  instance = {}; //the actual database instance
+  listeners = {}; //used to store thunk listeners and remove when unmounting
   
   constructor() {
     
-  
-    
     // Initialize Firebase
     var config = {
-      apiKey: "AIzaSyB2OgpFprYUIHrRXTQuAa7lX2SxbMbLtLM",
-      authDomain: "golf-app-27348.firebaseapp.com",
-      databaseURL: "https://golf-app-27348.firebaseio.com",
-      projectId: "golf-app-27348",
-      storageBucket: "golf-app-27348.appspot.com",
-      messagingSenderId: "519591727968"
+      apiKey: "",
+      authDomain: "",
+      databaseURL: "",
+      projectId: "",
+      storageBucket: "",
+      messagingSenderId: ""
     };
     firebase.initializeApp(config);
 
